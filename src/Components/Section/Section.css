@@ -1,0 +1,10 @@
+.Section {
+    display: inline-block;
+    /* flex-wrap: wrap; */
+    /* border-right: 1px #ec0d0d; */
+    /* background-color: #815e5e; */
+  
+    margin: 15px;
+
+    width: 500px;
+}
