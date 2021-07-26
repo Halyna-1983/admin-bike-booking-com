@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/admin-bike-booking-com/static/css/main.4889d7a3.chunk.css",
-    "main.js": "/admin-bike-booking-com/static/js/main.94d2fed7.chunk.js",
-    "main.js.map": "/admin-bike-booking-com/static/js/main.94d2fed7.chunk.js.map",
+    "main.css": "/admin-bike-booking-com/static/css/main.6ded3a47.chunk.css",
+    "main.js": "/admin-bike-booking-com/static/js/main.1be32bb0.chunk.js",
+    "main.js.map": "/admin-bike-booking-com/static/js/main.1be32bb0.chunk.js.map",
     "runtime-main.js": "/admin-bike-booking-com/static/js/runtime-main.838ec9cc.js",
     "runtime-main.js.map": "/admin-bike-booking-com/static/js/runtime-main.838ec9cc.js.map",
-    "static/js/2.2624c8e3.chunk.js": "/admin-bike-booking-com/static/js/2.2624c8e3.chunk.js",
-    "static/js/2.2624c8e3.chunk.js.map": "/admin-bike-booking-com/static/js/2.2624c8e3.chunk.js.map",
+    "static/js/2.9d5f56e1.chunk.js": "/admin-bike-booking-com/static/js/2.9d5f56e1.chunk.js",
+    "static/js/2.9d5f56e1.chunk.js.map": "/admin-bike-booking-com/static/js/2.9d5f56e1.chunk.js.map",
     "index.html": "/admin-bike-booking-com/index.html",
-    "static/css/main.4889d7a3.chunk.css.map": "/admin-bike-booking-com/static/css/main.4889d7a3.chunk.css.map",
-    "static/js/2.2624c8e3.chunk.js.LICENSE.txt": "/admin-bike-booking-com/static/js/2.2624c8e3.chunk.js.LICENSE.txt"
+    "static/css/main.6ded3a47.chunk.css.map": "/admin-bike-booking-com/static/css/main.6ded3a47.chunk.css.map",
+    "static/js/2.9d5f56e1.chunk.js.LICENSE.txt": "/admin-bike-booking-com/static/js/2.9d5f56e1.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.838ec9cc.js",
-    "static/js/2.2624c8e3.chunk.js",
-    "static/css/main.4889d7a3.chunk.css",
-    "static/js/main.94d2fed7.chunk.js"
+    "static/js/2.9d5f56e1.chunk.js",
+    "static/css/main.6ded3a47.chunk.css",
+    "static/js/main.1be32bb0.chunk.js"
   ]
 }
