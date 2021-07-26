@@ -17,6 +17,8 @@ class Form extends Component {
   colorInputId = shortid.generate();
   wheelSizeInputId = shortid.generate();
   priceInputId = shortid.generate();
+  idInputId = shortid.generate();
+  descriptionInputId = shortid.generate();
 
 handleChange = event => {
     const {name, value} = event.currentTarget
@@ -64,8 +66,8 @@ render() {
           type="text"
           name="type"
           className="label"
-          pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-          title="Номер телефона должен состоять цифр и может содержать пробелы, тире, круглые скобки и может начинаться с +"
+          pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+          title="Имя может состоять только из букв, апострофа, тире и пробелов. Например Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan и т. п."
           required
           value={this.state.type} 
           onChange={this.handleChange}
@@ -79,8 +81,8 @@ render() {
           type="text"
           name="color"
           className="label"
-          pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-          title="Номер телефона должен состоять цифр и может содержать пробелы, тире, круглые скобки и может начинаться с +"
+          pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+          title="Имя может состоять только из букв, апострофа, тире и пробелов. Например Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan и т. п."
           required
           value={this.state.color} 
           onChange={this.handleChange}
@@ -91,7 +93,7 @@ render() {
         <label className="input" htmlFor={this.wheelSizeInputId}>
      
           <input 
-          type="number"
+          type="num"
           name="wheelSize"
           className="label"
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
@@ -106,7 +108,7 @@ render() {
         <label className="input" htmlFor={this.priceInputId}>
      
           <input 
-          type="number"
+          type="num"
           name="price"
           className="label"
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
@@ -117,8 +119,39 @@ render() {
           id={this.priceInputId}
           placeholder="Price"/>
         </label>
+
+        <label className="input" htmlFor={this.idInputId}>
+     
+          <input 
+          type="num"
+          name="id"
+          className="label"
+          // pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+          // title="Номер телефона должен состоять цифр и может содержать пробелы, тире, круглые скобки и может начинаться с +"
+          required
+          value={this.state.id} 
+          onChange={this.handleChange}
+          id={this.idInputId}
+          placeholder="ID"/>
+        </label>
+
+        <label className="input-description" htmlFor={this.descriptionInputId}>
+     
+          <input 
+          type="text"
+          name="description"
+          className="label-description"
+          // pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+          // title="Имя может состоять только из букв, апострофа, тире и пробелов. Например Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan и т. п."
+          required
+          value={this.state.description} 
+          onChange={this.handleChange}
+          id={this.descriptionInputId}
+          placeholder="Description"/>
+        </label>
            
-      <button type="submit" className="button">Add contact</button>
+      <button type="submit" className="button">SAVE</button>
+      <button type="submit" className="button">CLEAR</button>
      
   </form>
         )
