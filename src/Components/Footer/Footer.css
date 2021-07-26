@@ -1,10 +1,16 @@
 .Footer-title {
-    font-family: Saira;
+    font-family: Saira Stencil One;
+    font-weight: 400;
     font-style: normal;
     font-style: 20px;
-    vertical-align: bottom;
-    align-items: center;
+    text-align: right;
+
 
     background-color: #696969;
     color: #FFFFFF;
+
+    height: 42px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
 }
