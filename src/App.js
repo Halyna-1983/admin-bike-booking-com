@@ -6,6 +6,7 @@ import Header from './Components/Header';
 import Section from './Components/Section';
 import Form from './Components/Form';
 import BikeList from './Components/BikeList';
+import Statistics from './Components/Statistics';
 import Footer from './Components/Footer';
 import './App.css';
 import shortid from 'shortid';
@@ -25,7 +26,12 @@ class App extends Component {
   color: '',
   wheelSize: '',
   price: '',
-  id: ''
+  id: '',
+  total: 0,
+  available: 0,
+  booked: 0,
+  cost: 0
+
   }
 
   // componentDidMount() {}
@@ -49,11 +55,23 @@ class App extends Component {
     )
   }
 
+  // countTotalBikes = (value) => {
+  //   this.setState(prevState => ({[value]: prevState[value] + 1}));
+  // };
+
+  // countTotalBikes = () => {
+  // const total = this.state.good + this.state.neutral + this.state.bad;
+  // return total;   
+  // };
+
   render () {
     const normalizedThisFilterState = this.state.name.toLowerCase();
     const visibleBikes = this.state.bikes.filter(bike =>
       bike.name.toLowerCase().includes(normalizedThisFilterState),
     );
+    
+    
+
     return (
     <Layout>
       <Header title = "ADMIN.BIKE-BOOKING.COM" />
@@ -63,6 +81,12 @@ class App extends Component {
       </Section>
       <Section >
         <Form onSubmit={this.formSubmitHandler} />
+        <Statistics 
+        // total = {this.bikes.length}
+        // available = {available}
+        // booked = {booked}
+        // average = {cost} 
+        />
       </Section>
 
       <Footer title = "Developer: Halyna Kolpakova" />
