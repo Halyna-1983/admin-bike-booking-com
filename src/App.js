@@ -8,21 +8,18 @@ import Form from './Components/Form';
 import BikeList from './Components/BikeList';
 import Statistics from './Components/Statistics';
 import Footer from './Components/Footer';
-import './App.css';
 import shortid from 'shortid';
-
-
 
 class App extends Component {
   state = {
     bikes: [
-      {id: 'id-1', name: 'Jack', type: 'road', color: 'grey', wheelSize: '26', price: '300'},
-      {id: 'id-2', name: 'Nill', type: 'mountain', color: 'blue', wheelSize: '24', price: '400'},
-      {id: 'id-3', name: 'Bob', type: 'hybrid', color: 'dark-red', wheelSize: '26', price: '500'},
+      {id: 'id-1', name: 'Jack', bikeType: 'road', color: 'grey', wheelSize: '26', price: '300'},
+      {id: 'id-2', name: 'Nill', bikeType: 'mountain', color: 'blue', wheelSize: '24', price: '400'},
+      {id: 'id-3', name: 'Bob', bikeType: 'hybrid', color: 'dark-red', wheelSize: '26', price: '500'},
       {id: 'id-4', name: 'Herman', type: 'electric', color: 'green', wheelSize: '28', price: '600'},
     ],
   name: '',
-  type: '',
+  bikeType: '',
   color: '',
   wheelSize: '',
   price: '',
@@ -37,13 +34,13 @@ class App extends Component {
   // componentDidMount() {}
 
   // componentDidUpdate(prevProps, prevState) {}
-  formSubmitHandler = ({ name, type, color, wheelSize, price, id }) => {
+  formSubmitHandler = ({ name, bikeType, color, wheelSize, price, id }) => {
     if (this.state.bikes.some(bike => bike.name === name)) {
       alert(`${name} is already in contacts.`);
       return;
     }
 
-    const bike = { id: shortid.generate(), name, type, color, wheelSize, price };
+    const bike = { id: shortid.generate(), name, bikeType, color, wheelSize, price };
     this.setState(
       prevState => ({ bikes: [bike, ...prevState.bikes] })
     );
@@ -70,8 +67,6 @@ class App extends Component {
       bike.name.toLowerCase().includes(normalizedThisFilterState),
     );
     
-    
-
     return (
     <Layout>
       <Header title = "ADMIN.BIKE-BOOKING.COM" />
@@ -82,6 +77,7 @@ class App extends Component {
       <Section >
         <Form onSubmit={this.formSubmitHandler} />
         <Statistics 
+        title = "Statistics"
         // total = {this.bikes.length}
         // available = {available}
         // booked = {booked}

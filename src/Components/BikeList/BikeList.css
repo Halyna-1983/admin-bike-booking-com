@@ -6,6 +6,9 @@
 }
 
 .bike-list-item {
+    display: flex;
+    align-items: center;
+
     width: 620px;
     height: 85px;
     border-radius: 10px;
@@ -14,13 +17,27 @@
     background-color: #E8E8E8;
 
     padding: 5px, 16px, 5px, 16px;
-    margin: 5px;
+    margin: 0 15px 15px 15px;
 
     list-style: none;
+    /* justify-content: space-between; */
 }
 
 .bike {
     display: inline-block;
     padding: 10px;
     font-weight: 500;
+  }
+
+  .bike-name {
+    font-family: Saira Stencil One;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 14px;
+  }
+
+  .delete-btn {
+      text-align: right;
+      /* justify-content: space-between; */
+      align-items: flex-end;
   }

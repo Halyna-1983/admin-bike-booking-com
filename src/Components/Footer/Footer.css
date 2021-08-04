@@ -5,7 +5,13 @@
     font-style: 20px;
     text-align: right;
 
-
+    margin-top: 140px;
+    margin-bottom: 0;
+    
+    align-self: flex-end;
+    align-items: flex-end;
+    align-content: flex-end;
+    vertical-align: bottom;
     background-color: #696969;
     color: #FFFFFF;
 

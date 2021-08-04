@@ -1,10 +1,11 @@
 .Section {
-    display: inline-block;
+    display: inline-grid;
     /* flex-wrap: wrap; */
     /* border-right: 1px #ec0d0d; */
     /* background-color: #815e5e; */
   
-    margin: 15px;
+    margin: 0px 15px;
+    vertical-align: top;
 
     width: 620px;
 }
